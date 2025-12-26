@@ -177,3 +177,71 @@ dotenvy = "0.15"
 | 2469 | Convert the Temperature | `p2469_convert_the_temperature.rs` |
 | 2413 | Smallest Even Multiple | `p2413_smallest_even_multiple.rs` |
 | 2235 | Add Two Integers | `p2235_add_two_integers.rs` |
+
+## Neovim + leetcode.nvim Integration
+
+You can also solve LeetCode problems directly in Neovim using [leetcode.nvim](https://github.com/kawre/leetcode.nvim).
+
+![leetcode.nvim in action](assets/nvim-leetcode.png)
+
+### Complete Workflow
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                        WORKFLOW                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  1. SOLVE in Neovim                                             │
+│     ┌──────────────┐                                            │
+│     │  :Leet       │  ← Pick a problem                          │
+│     │  Write code  │  ← LSP + autocomplete                      │
+│     │  :Leet run   │  ← Test locally                            │
+│     │  :Leet submit│  ← Submit to LeetCode                      │
+│     └──────────────┘                                            │
+│            │                                                    │
+│            ▼                                                    │
+│  2. SUBMIT to LeetCode.com                                      │
+│     ┌──────────────┐                                            │
+│     │  ✓ Accepted  │  ← Stored on LeetCode servers              │
+│     └──────────────┘                                            │
+│            │                                                    │
+│            ▼                                                    │
+│  3. SYNC to local repo                                          │
+│     ┌────────────────────────┐                                  │
+│     │  cargo run --bin sync  │  ← Fetches from LeetCode API     │
+│     └────────────────────────┘                                  │
+│            │                                                    │
+│            ▼                                                    │
+│  4. FILES created in src/                                       │
+│     ┌──────────────────────────┐                                │
+│     │  src/p704_binary_search.rs│                               │
+│     │  src/p35_search_insert... │                               │
+│     └──────────────────────────┘                                │
+│            │                                                    │
+│            ▼                                                    │
+│  5. COMMIT & PUSH to GitHub                                     │
+│     ┌──────────────┐                                            │
+│     │  git add .   │                                            │
+│     │  git commit  │                                            │
+│     │  git push    │                                            │
+│     └──────────────┘                                            │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Neovim Commands
+
+| Command | Action |
+|---------|--------|
+| `:Leet` | Open problem list |
+| `:Leet run` | Run test cases |
+| `:Leet submit` | Submit solution |
+| `:Leet lang rust` | Set language to Rust |
+
+### Panel Layout
+
+- **Left panel**: Problem description with examples and constraints
+- **Right panel**: Code editor with LSP support
+- Use `@leet` markers in code:
+  - `// @leet start` - Begin solution
+  - `// @leet end` - End solution
