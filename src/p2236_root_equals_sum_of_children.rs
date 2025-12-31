@@ -1,7 +1,6 @@
 use crate::Solution;
 
-// @leet start
-// Definition for a binary tree node.
+// Definition for a binary tree node (for local LSP only, not submitted)
 #[derive(Debug, PartialEq, Eq)]
 pub struct TreeNode {
     pub val: i32,
@@ -19,10 +18,20 @@ impl TreeNode {
         }
     }
 }
+
+// @leet start
 use std::cell::RefCell;
 use std::rc::Rc;
+
 impl Solution {
-    pub fn check_tree(root: Option<Rc<RefCell<TreeNode>>>) -> bool {}
+    pub fn check_tree(root: Option<Rc<RefCell<TreeNode>>>) -> bool {
+        let node = root.unwrap();
+        let node = node.borrow();
+
+        let left = node.left.as_ref().unwrap().borrow().val;
+        let right = node.right.as_ref().unwrap().borrow().val;
+
+        node.val == left + right
+    }
 }
 // @leet end
-
