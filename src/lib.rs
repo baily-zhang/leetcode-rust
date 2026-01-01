@@ -10,3 +10,4 @@ pub mod p704_binary_search;
 pub mod p2236_root_equals_sum_of_children;
 pub mod p1486_xor_operation_in_an_array;
 pub mod p1512_number_of_good_pairs;
+pub mod p1534_count_good_triplets;
