@@ -1,17 +1,16 @@
 pub struct Solution;
 
 // Add your solution modules here
-pub mod p2235_add_two_integers;
-pub mod p2413_smallest_even_multiple;
-pub mod p2469_convert_the_temperature;
-pub mod p34_find_first_and_last_position_of_element_in_sorted_array;
-pub mod p35_search_insert_position;
-pub mod p704_binary_search;
-pub mod p2236_root_equals_sum_of_children;
 pub mod p1486_xor_operation_in_an_array;
 pub mod p1512_number_of_good_pairs;
 pub mod p1534_count_good_triplets;
-pub mod p1584_min_cost_to_connect_all_points;
-pub mod p587_erect_the_fence;
-pub mod p709_to_lower_case;
+pub mod p2235_add_two_integers;
+pub mod p2236_root_equals_sum_of_children;
+pub mod p2413_smallest_even_multiple;
+pub mod p2469_convert_the_temperature;
 pub mod p258_add_digits;
+pub mod p34_find_first_and_last_position_of_element_in_sorted_array;
+pub mod p35_search_insert_position;
+pub mod p704_binary_search;
+pub mod p709_to_lower_case;
+pub mod p1281_subtract_the_product_and_sum_of_digits_of_an_integer;
