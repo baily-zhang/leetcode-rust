@@ -3,18 +3,12 @@ use crate::Solution;
 // @leet start
 impl Solution {
     pub fn subtract_product_and_sum(n: i32) -> i32 {
-        let product = n
+        let (sum, product) = n
             .to_string()
             .chars()
-            .fold(1, |acc, x| acc * x.to_digit(10).unwrap()) as i32;
-
-        let sum = n
-            .to_string()
-            .chars()
-            .fold(0, |acc, x| acc + x.to_digit(10).unwrap()) as i32;
-
+            .map(|c| c.to_digit(10).unwrap() as i32)
+            .fold((0, 1), |(sum, product), d| (sum + d, product * d));
         product - sum
     }
 }
 // @leet end
-

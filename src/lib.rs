@@ -14,3 +14,4 @@ pub mod p35_search_insert_position;
 pub mod p704_binary_search;
 pub mod p709_to_lower_case;
 pub mod p1281_subtract_the_product_and_sum_of_digits_of_an_integer;
+pub mod p231_power_of_two;
