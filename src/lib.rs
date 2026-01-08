@@ -1,6 +1,7 @@
 pub struct Solution;
 
 // Add your solution modules here
+pub mod p1281_subtract_the_product_and_sum_of_digits_of_an_integer;
 pub mod p1486_xor_operation_in_an_array;
 pub mod p1512_number_of_good_pairs;
 pub mod p1534_count_good_triplets;
@@ -13,5 +14,5 @@ pub mod p34_find_first_and_last_position_of_element_in_sorted_array;
 pub mod p35_search_insert_position;
 pub mod p704_binary_search;
 pub mod p709_to_lower_case;
-pub mod p1281_subtract_the_product_and_sum_of_digits_of_an_integer;
 pub mod p231_power_of_two;
+pub mod p326_power_of_three;
