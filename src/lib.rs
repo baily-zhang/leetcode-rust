@@ -16,3 +16,4 @@ pub mod p704_binary_search;
 pub mod p709_to_lower_case;
 pub mod p231_power_of_two;
 pub mod p326_power_of_three;
+pub mod p263_ugly_number;
