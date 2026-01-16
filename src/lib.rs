@@ -18,3 +18,4 @@ pub mod p231_power_of_two;
 pub mod p326_power_of_three;
 pub mod p263_ugly_number;
 pub mod p1470_shuffle_the_array;
+pub mod p867_transpose_matrix;
