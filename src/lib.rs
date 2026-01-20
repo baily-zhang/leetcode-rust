@@ -20,3 +20,4 @@ pub mod p263_ugly_number;
 pub mod p1470_shuffle_the_array;
 pub mod p867_transpose_matrix;
 pub mod p832_flipping_an_image;
+pub mod p344_reverse_string;
