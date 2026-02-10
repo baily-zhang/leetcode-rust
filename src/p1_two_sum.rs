@@ -4,12 +4,12 @@ impl Solution {
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
         nums.iter()
             .enumerate()
-            .find_map(|(j, &a)| {
+            .find_map(|(i, &a)| {
                 nums.iter()
                     .enumerate()
-                    .skip(j + 1)
+                    .skip(i + 1)
                     .find(|&(_, &b)| a + b == target)
-                    .map(|(i, _)| vec![j as i32, i as i32])
+                    .map(|(j, _)| vec![i as i32, j as i32])
             })
             .unwrap()
     }
