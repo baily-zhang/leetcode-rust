@@ -9,7 +9,7 @@ impl Solution {
                     .enumerate()
                     .skip(i + 1)
                     .find(|&(_, b)| a + b == target)
-                    .map(|(j, _)| vec![i as i32, j as i32])
+                    .map(|(_, j)| vec![i as i32, j as i32])
             })
             .unwrap()
     }
