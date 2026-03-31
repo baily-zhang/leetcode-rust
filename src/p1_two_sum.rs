@@ -5,11 +5,13 @@ impl Solution {
         nums.iter()
             .enumerate()
             .find_map(|(i, a)| {
-                nums.iter()
-                    .enumerate()
-                    .skip(i + 1)
-                    .find(|&(_, b)| a + b == target)
-                    .map(|(_, j)| vec![i as i32, j as i32])
+                nums.iter().enumerate().skip(i + 1).find_map(|(j, b)| {
+                    if a + b == target {
+                        Some(vec![i as i32, j as i32])
+                    } else {
+                        None
+                    }
+                })
             })
             .unwrap()
     }
